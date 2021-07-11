@@ -50,10 +50,11 @@ if (isset($_POST['reg_user'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-  	$query1 = "INSERT INTO `students`(`username`, `name`, `groupof`, `sex`, `phonenum`, `email`, `address`, `nxtkin`, `phonenum_nxtkin`) VALUES ('$username', '$name', '$groupof', '$sex', '$phonenum', '$email', '$address', '$nxtkin', '$phonenum_nxtkin')";
-    $query2 = "INSERT INTO `users`(`username`, `password`) VALUES ('$username', '" . md5($password) . "')";
-  	mysqli_query($db, $query1);
-    mysqli_query($db, $query2);
+  	$sql1 ="INSERT INTO `students`(`username`, `name`, `groupof`, `sex`, `phonenum`, `email`, `address`, `nxtkin`, `phonenum_nxtkin`) VALUES ('$username', '$name', '$groupof', '$sex', '$phonenum', '$email', '$address', '$nxtkin', '$phonenum_nxtkin')";
+    $sql2 ="INSERT INTO `users`(`username`, `password`) VALUES ('$username', MD5('".$password."'))";
+    mysqli_query($db, $sql1);
+    mysqli_query($db, $sql2);
+
   }
 }
 ?>
