@@ -18,7 +18,7 @@ if(isset($_POST['log_in'])){
 
         if($count > 0){
             $_SESSION['username'] = $username;
-            header('Location: home.php');
+            header('Location: test.php');
         }else{
             echo "Invalid username and password";
         }
