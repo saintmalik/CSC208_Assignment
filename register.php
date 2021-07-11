@@ -8,20 +8,14 @@
 <meta name="author" content="Abdulmalik" />
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" type="text/css" href="strap.css">
-<link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" />
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 </head>
 <body>
 <?php
-session_start();
-
-// initializing variables
-$username = "";
-$errors = array(); 
+$errors = array();
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '123456', 'CSEFirst');
+
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -39,7 +33,7 @@ if (isset($_POST['reg_user'])) {
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
   if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
+    array_push($errors,"The two passwords do not match");
   }
 
   // first check the database to make sure 
@@ -56,22 +50,17 @@ if (isset($_POST['reg_user'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-  	$password = md5($password_1);//encrypt the password before saving in the database
-
   	$query1 = "INSERT INTO `students`(`username`, `name`, `groupof`, `sex`, `phonenum`, `email`, `address`, `nxtkin`, `phonenum_nxtkin`) VALUES ('$username', '$name', '$groupof', '$sex', '$phonenum', '$email', '$address', '$nxtkin', '$phonenum_nxtkin')";
-    $query2 .= "INSERT INTO `users`(`username`, `password`) VALUES ('$username', '$password')";
+    $query2 = "INSERT INTO `users`(`username`, `password`) VALUES ('$username', '" . md5($password) . "')";
   	mysqli_query($db, $query1);
     mysqli_query($db, $query2);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: demo.php');
   }
 }
 ?>
 <div class="container">
 <div class="contact-form-layouts">
-<h5 class="cont-form">Student Registration Form</h5>
-<form method="post" action="register.php" class="register-wthree form-group">
+<h5 class="cont-form">CSEFirst Group1 Registration Form</h5>
+<form method="post" action="" class="register-wthree form-group">
 <?php include('error.php'); ?>
 <div class="form-group">
 <label for="username">Username/Matric No:</label>
@@ -123,7 +112,7 @@ if (isset($_POST['reg_user'])) {
 </div>
 </form>
 <p class="lol">
-<a href="/index.php">Signed Up Already? Login!</a>
+<a href="login.php">Signed Up Already? Login!</a>
 </p>
 </div>
 </div>
