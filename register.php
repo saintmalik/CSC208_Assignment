@@ -121,6 +121,3 @@
 </body>
 
 </html>
-
-
-$db = mysqli_connect('localhost', 'id17229299_csefirst1', 'h/fPt0Qecx>QXdue', 'id17229299_csefirst');

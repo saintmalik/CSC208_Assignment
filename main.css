@@ -43,8 +43,25 @@ h3 {
   margin-bottom: 10px;
   display: none;
 }
+.studentinfo{
+  border:1px solid #DDDDDD;
+  -webkit-border-radius:5px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+  box-shadow: 6px 6px 6x rgba(0, 0, 0, 0.3);
+  margin-top: 3%;
+}			
 .hmp {
   padding-top: 9%;
+}
+.list-group {
+  padding-bottom: 10%;
+}
+.stn {
+  text-align: center;
+}
+.button {
+  text-align: center;
 }
 @media screen and (max-width: 568px) {
   h5.cont-form {
@@ -69,5 +86,4 @@ h3 {
     font-size: 0.85em;
   }
 }
-
-
+                                                      

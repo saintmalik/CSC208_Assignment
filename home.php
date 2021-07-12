@@ -9,14 +9,6 @@ if (!isset($_SESSION['username'])) {
     $row = mysqli_fetch_array($result);
     $user_data = $row;
 }
-// if ($_SESSION["username"]) {
-//     $query = "SELECT * FROM students WHERE username = " . $_SESSION["username"];
-//     $result = mysqli_query($con, $query);
-//     $row = mysqli_fetch_array($result);
-//     $user_data = $row;
-// } else {
-//     header('Location: login.php');
-// }
 
 if (isset($_POST['but_logout'])) {
     session_destroy();
@@ -36,73 +28,125 @@ if (isset($_POST['but_logout'])) {
 </head>
 
 <body>
-    <table border="0" cellpadding="10" cellspacing="1" width="500" align="center">
-        <tr class="tableheader">
-            <td align="center">User Dashboard</td>
-        </tr>
-        <tr class="tablerow">
-            <td>
-                <div id="reg-head" class="headrg">Your Profile</div>
-                <table border="0" align="center" cellpadding="2" cellspacing="0">
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Matric No/Username:</div>
+<div class="container">
+<div class="studentinfo">
+    <div class="row">
+        <div class="col-md-4">
+            <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="avatar.png"> 
+        </div>
+        <div class="col-md-6">
+            <h4 class="stn">Student Informations</h4>
+            <div class="table-responsive">
+            <table class="table table-user-information">
+                <tbody>
+                    <tr>        
+                        <td>
+                            <strong>
+                                Matric No/Username:                                               
+                            </strong>
                         </td>
-                        <td class="tl-4"><?php echo $user_data['username']; ?></td>
-                    </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Name:</div>
+                        <td class="text-dark">
+                        <?php echo $user_data['username']; ?>    
                         </td>
-                        <td class="tl-4"><?php echo $user_data['name']; ?></td>
                     </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Group Of:</div>
+                    <tr>    
+                        <td>
+                            <strong>
+                                Name:                                                
+                            </strong>
                         </td>
-                        <td class="tl-4"><?php echo $user_data['groupof']; ?></td>
-                    </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Sex:</div>
+                        <td class="text-dark">
+                        <?php echo $user_data['name']; ?>   
                         </td>
-                        <td class="tl-4"><?php echo $user_data['sex']; ?></td>
                     </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Phone Number:</div>
+                    <tr>        
+                        <td>
+                            <strong>
+                                Group Of:                                               
+                            </strong>
                         </td>
-                        <td class="tl-4"><?php echo $user_data['phonenum']; ?></td>
-                    </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Email:</div>
+                        <td class="text-dark">
+                        <?php echo $user_data['groupof']; ?>
                         </td>
-                        <td class="tl-4"><?php echo $user_data['email']; ?></td>
                     </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Address:</div>
+
+                    <tr>        
+                        <td>
+                            <strong>
+                                Sex:                                                
+                            </strong>
                         </td>
-                        <td class="tl-4"><?php echo $user_data['address']; ?></td>
-                    </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Next Of Kin:</div>
+                        <td class="text-dark">
+                        <?php echo $user_data['sex']; ?>
                         </td>
-                        <td class="tl-4"><?php echo $user_data['nxtkin']; ?></td>
                     </tr>
-                    <tr id="lg-1">
-                        <td class="tl-1">
-                            <div align="left" id="tb-name">Next Of Kin Phone Number:</div>
+
+
+                    <tr>        
+                        <td>
+                            <strong>
+                                Phone Number:                                               
+                            </strong>
                         </td>
-                        <td class="tl-4"><?php echo $user_data['phonenum_nxtkin']; ?></td>
+                        <td class="text-dark">
+                        <?php echo $user_data['phonenum']; ?>
+                        </td>
                     </tr>
-                </table>
-                <form method='post' action="">
-                    <input type="submit" value="Logout" name="but_logout">
-                </form>
-                <a href="index.php">Homepage</a>
+                    <tr>        
+                        <td>
+                            <strong>
+                                Email:                                               
+                            </strong>
+                        </td>
+                        <td class="text-dark">
+                        <?php echo $user_data['email']; ?> 
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                Address:                                               
+                            </strong>
+                        </td>
+                        <td class="text-dark">
+                        <?php echo $user_data['address']; ?>
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                Next Of Kin:                                              
+                            </strong>
+                        </td>
+                        <td class="text-dark">
+                        <?php echo $user_data['nxtkin']; ?>
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                Next Of Kin Phone Number:                                              
+                            </strong>
+                        </td>
+                        <td class="text-dark">
+                        <?php echo $user_data['phonenum_nxtkin']; ?>
+                        </td>
+                    </tr>                                    
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="button">
+<a href="index.php"><button>Check Group 1 Coursemate </button></a><br/><br/>
+<form method='post' action="">
+<input type="submit" value="Logout" name="but_logout">
+</form>
+</div>
+</div>
+
 </body>
 
 </html>

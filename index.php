@@ -21,28 +21,27 @@ if (!isset($_SESSION['username'])) {
 
 <body>
     <div class="hmp" align="center">
-        <h4>Welcome Back!!!, <?php echo $_SESSION['username']; ?> </h4>
-        <a href="home.php">View Your Own Profile</a>
-        <br/><br/><br/>
-        <h3>List Of Members in CSC Edu Group 1</h3><br/>
+        <h4>Welcome Back!!!, <?php echo $_SESSION['username']; ?> </h4><br/>
+        <a href="home.php"><button>View Your Own Profile</button></a><br/><br/><br/>
+        <h3>Members in CSC Edu Group 1</h3><br/>
     </div>
-        <ol>
-            <li>ADEKOLA TIMILEYIN JOEL</li>
-            <li>HASSAN DANIEL ADEDAYO</li>
-            <li>SALAWU ABDULMALIK ADEWALE</li>
-            <li>OGUNTOYINBO ESTHER</li>
-            <li>ADEBAYO IFEOLUWA</li>
-            <li>AKINOLA AKINYINKA</li>
-            <li>ALI-ANITA OYIYE</li>
-            <li>MURITALA TEMITOPE</li>
-            <li>OSOMADE LATEEF</li>
-            <li>JEMILEHIN OLUWATOSIN</li>
-            <li>SOMADE-IDOWU ROFIAT</li>
-            <li>AYODELE ABIMBOLA</li>
-            <li>BABALOLA AYOMIPOSI</li>
-            <li>DAMILOLA OLADEJI</li>
-            <li>ADEBAYO AYOBAMI EMMANUEL</li>
-            <li>OKEKUNLE OYEYEMI RIDWAN</li>
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item">ADEKOLA TIMILEYIN JOEL</li>
+            <li class="list-group-item">HASSAN DANIEL ADEDAYO</li>
+            <li class="list-group-item">SALAWU ABDULMALIK ADEWALE</li>
+            <li class="list-group-item">OGUNTOYINBO ESTHER</li>
+            <li class="list-group-item">ADEBAYO IFEOLUWA</li>
+            <li class="list-group-item">AKINOLA AKINYINKA</li>
+            <li class="list-group-item">ALI-ANITA OYIYE</li>
+            <li class="list-group-item">MURITALA TEMITOPE</li>
+            <li class="list-group-item">OSOMADE LATEEF</li>
+            <li class="list-group-item">JEMILEHIN OLUWATOSIN</li>
+            <li class="list-group-item">SOMADE-IDOWU ROFIAT</li>
+            <li class="list-group-item">AYODELE ABIMBOLA</li>
+            <li class="list-group-item">BABALOLA AYOMIPOSI</li>
+            <li class="list-group-item">DAMILOLA OLADEJI</li>
+            <li class="list-group-item">ADEBAYO AYOBAMI EMMANUEL</li>
+            <li class="list-group-item">OKEKUNLE OYEYEMI RIDWAN</li>
         </ol>
 </body>
 
