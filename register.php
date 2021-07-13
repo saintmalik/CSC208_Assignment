@@ -56,6 +56,8 @@
       $sql2 = "INSERT INTO `users`(`username`, `password`) VALUES ('$username', '$password')";
       mysqli_query($db, $sql1);
       mysqli_query($db, $sql2);
+      // $success = 'Account Created Successfully';
+      array_push($errors, "Account Created Successfully!" );
     }
   }
   ?>
@@ -106,13 +108,14 @@
         <input class="form-control" type="password" placeholder="********" name="password_1" required>
         </div>
         <div class="form-group">
-          <label>Password</label>
+          <label>Confirm Password</label>
           <input class="form-control" type="password" placeholder="********" name="password_2" required>
         </div>
         <div class="form-group">
           <button type="submit" name="reg_user" class="mt-4 btn btn-w3layouts btn-block btn-success text-white w-100 font-weight-bold text-uppercase">Create Account</button>
         </div>
       </form>
+      <br/>
       <p class="lol">
         <a href="login.php">Signed Up Already? Login!</a>
       </p>
