@@ -31,7 +31,7 @@ if (isset($_POST['log_in'])) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login Page</title>
+    <title>CSC 208 Assignment Group 1(Edu) Login Page</title>
     <meta name="author" content="Abdulmalik" />
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="strap.css">
@@ -40,7 +40,7 @@ if (isset($_POST['log_in'])) {
 <body>
     <div class="container">
         <div class="contact-form-layouts">
-            <h5 class="cont-form">CSEFirst Group1 Login</h5>
+            <h5 class="cont-form">CSC 208 Assignment Group 1(Edu) Login</h5>
             <form method="post" action="" class="register-wthree form-group">
                 <div class="form-group">
                     <label for="username">Username/Matric No:</label>
