@@ -21,7 +21,7 @@ if (isset($_POST['but_logout'])) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>CSC 208 Web Programming Group Assignment</title>
     <meta name="author" content="Abdulmalik" />
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="strap.css">
