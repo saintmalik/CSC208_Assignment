@@ -32,7 +32,7 @@ if (isset($_POST['but_logout'])) {
 <div class="studentinfo">
     <div class="row">
         <div class="col-md-4">
-            <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="avatar.png"> 
+            <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail" src="avatar.png"> 
         </div>
         <div class="col-md-6">
             <h4 class="stn">Student Informations</h4>
