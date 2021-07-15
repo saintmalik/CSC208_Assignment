@@ -13,7 +13,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>CSC 208 Web Programming Group Assignment</title>
     <meta name="author" content="Abdulmalik" />
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="strap.css">
