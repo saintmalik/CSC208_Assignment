@@ -1,9 +1,9 @@
 <?php
 session_start();
-$host = "localhost";
-$user = "root";
-$password = "123456";
-$db = "CSEFirst";
+$host = "";
+$user = "";
+$password = "";
+$db = "";
 
 $con = mysqli_connect($host, $user, $password, $db);
 // Check connection
