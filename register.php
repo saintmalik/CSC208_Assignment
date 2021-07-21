@@ -16,7 +16,7 @@
   $errors = array();
 
   // connect to the database
-  $db = mysqli_connect('', '', '', '');
+  $db = mysqli_connect('localhost', 'root', '123456', 'CSEFirst');
 
   // REGISTER USER
   if (isset($_POST['reg_user'])) {
@@ -57,7 +57,7 @@
       mysqli_query($db, $sql1);
       mysqli_query($db, $sql2);
       // $success = 'Account Created Successfully';
-      array_push($errors, "Account Created Successfully!" );
+      echo "<div class='alarm-success'>Account Created Successfully! <br/><a href='login.php'>Login Now</a></div>";
     }
   }
   ?>

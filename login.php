@@ -20,7 +20,8 @@ if (isset($_POST['log_in'])) {
             $_SESSION['username'] = $username;
             header('Location: home.php');
         } else {
-            echo "Invalid username and password";
+            echo "<div class='alarm-danger'>
+            Username/password is incorrect.</div>";
         }
     }
 }
