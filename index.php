@@ -32,9 +32,9 @@ if (!isset($_SESSION['username'])) {
             <li class="list-group-item">OGUNTOYINBO ESTHER</li>
             <li class="list-group-item">ADEBAYO IFEOLUWA</li>
             <li class="list-group-item">AKINOLA AKINYINKA</li>
-            <li class="list-group-item">ALI-ANITA OYIYE</li>
+            <li class="list-group-item">ALI-ANITA ONYINYE</li>
             <li class="list-group-item">MURTALA TEMITOPE</li>
-            <li class="list-group-item">OSOMADE LATEEF</li>
+            <li class="list-group-item">OSOMODE LATEEF</li>
             <li class="list-group-item">JEMILEHIN OLUWATOSIN</li>
             <li class="list-group-item">SOMADE-IDOWU ROFIAT</li>
             <li class="list-group-item">AYODELE ABIMBOLA</li>
